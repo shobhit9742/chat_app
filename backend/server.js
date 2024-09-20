@@ -41,10 +41,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Connect to MongoDB
 mongoose
-  .connect(config.mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(config.mongoURI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => {
     console.error(err.message);
