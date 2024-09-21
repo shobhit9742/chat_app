@@ -9,7 +9,7 @@ const Chat = ({ setAuth, username }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    socketRef.current = io("http://localhost:5000", {
+    socketRef.current = io("https://chat-app-q0as.onrender.com/api", {
       auth: {
         token: token,
       },
